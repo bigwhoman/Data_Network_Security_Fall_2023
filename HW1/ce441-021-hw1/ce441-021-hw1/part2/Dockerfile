@@ -17,7 +17,14 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 
 COPY ./app /app
 WORKDIR /app
-
+RUN apt update
+RUN apt -y install locales && locale-gen en_US.UTF-8
+RUN git clone https://github.com/pwndbg/pwndbg.git && \
+    ./pwndbg/setup.sh && \
+    apt -y install wget && \
+    git clone https://github.com/radareorg/radare2 && \
+    radare2/sys/install.sh
+ENV LANG en_US.UTF-8
 EXPOSE 7480
 
 ENTRYPOINT [ "bash", "/app/startService.sh" ]

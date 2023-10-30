@@ -8,3 +8,5 @@ services:
             - seccomp:unconfined
         cap_add:
             - SYS_PTRACE
+        environment:
+            - LANG=en_US.utf8
