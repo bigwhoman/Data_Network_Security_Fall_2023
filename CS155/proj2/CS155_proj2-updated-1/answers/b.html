@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+
+<script>
+payload = [
+    "destination_username=user1&quantity=10"
+]
+
+
+fetch('http://localhost:3000/post_transfer', {
+ method: 'POST',
+ headers: {
+   'Content-Type': 'application/json',
+   'Access-Control-Allow-Origin' : '*'
+ },
+ body: JSON.stringify({payload})
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error(error));
+</script>
