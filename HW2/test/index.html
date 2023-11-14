@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Display Array</title>
+</head>
+<body>
+ <div id="array-display"></div>
+ <script>
+	 	 // Generate an array of numbers from 1 to 10
+	 var array = Array.from({length: 10}, (_, index) => index + 1);
+	 
+	 // Convert the array to a string
+	 var arrayString = array.join(', ');
+	 
+	 // Display the array in the div
+	 var displayDiv = document.getElementById('array-display');
+	 displayDiv.textContent = arrayString;
+ </script>
+</body>
+</html>
+

