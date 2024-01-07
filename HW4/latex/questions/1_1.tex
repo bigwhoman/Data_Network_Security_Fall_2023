@@ -1,0 +1,45 @@
+\begin{enumerate}[label=\alph*)]
+  \item 
+برای اولین قسمت از پروتکل 
+\lr{diffie-helman}
+برای ساخت و تبادل کلید استفاده می‌کنیم.
+\begin{latin}
+  $C \rightarrow KDC: IP_S$\\
+  $KDC \rightarrow C: K_{C,S}$\\
+  $C \rightarrow S: E(K_{C,S},\alpha || q || Y_C = (\alpha^{X_C} mod q))$\\
+  $S \rightarrow C: E(K_{C,S}, Y_S = (\alpha^{X_S} mod q))$\\
+  $K' = Y_C ^ {X_S} modq = Y_S ^ {X_C} modq$
+\end{latin}
+حال عملا با دیفی هلمن توانستیم 
+کلیدی ایجاد کنیم که KDC 
+از آن اطلاعی ندارد اما طرفین آن را می‌دانند.
+\item 
+در صورتی که KDC 
+توان تغییر ترافیک را داشته باشد می‌تواند حمله Man-In-The-Middle
+را پیاده‌سازی کند و عملا خود را برای S جای C و برای C جای S جا بزند.
+\begin{latin}
+  $C \rightarrow KDC: IP_S$\\
+  $KDC \rightarrow C: K_{C,S}$\\
+  $C \rightarrow S: E(K_{C,S},\alpha || q || Y_C = (\alpha^{X_C} mod q))$\\
+  $\text{KDC Intercept -- }KDC \rightarrow S: E(K_{C,S},\alpha || q || Y_C' = (\alpha^{X_{KDC}} mod q))$\\
+  $S \rightarrow C: E(K_{C,S}, Y_S = (\alpha^{X_S} mod q))$\\
+  $\text{KDC Intercept -- }KDC \rightarrow C: E(K_{C,S},\alpha || q || Y_S' = (\alpha^{X_{KDC}} mod q))$\\
+\end{latin}
+
+
+\item 
+می‌دانیم KDCها
+با یکدیگر امکان تبانی ندارند پس منتطقا از کلید‌های یکدیگر نیز خبر ندارند.
+تنها کاری که لازم است انجام دهیم این است که K'
+را با هر دو کلید رمز کنیم.
+\begin{latin}
+  $C \rightarrow S: E(K_{C,S,2},E(K_{C,S,1},K'))$\\
+\end{latin}
+حال در صورتی که یکی از KDC
+ها 
+پیام را باز کند، نمی‌تواند متوجه پیام شود چون 
+\lr{$KDC_1$}
+نمی‌تواند پیام بیرونی را باز کند و 
+\lr{$KDC_2$}
+نیز نمی‌تواند پیام داخلی را باز کند.
+\end{enumerate}
