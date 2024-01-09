@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.4)  7 JAN 2024 18:39
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2023.11.4)  9 JAN 2024 23:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1212,23 +1212,95 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--3
 [][]
  []
 
-(./questions/3_1.tex [5]
+(./questions/3_1.tex [5] [6]
 File: pics/ipsec1.png Graphic file (type bmp)
 <pics/ipsec1.png>
- [6]
 File: pics/ipsec2.png Graphic file (type bmp)
 <pics/ipsec2.png>
-)) [7] (./HW.aux)
+)) [7] (./questions/4.tex (./questions/4_1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--1
+[][]
+ []
+
+File: pics/wireshark1.png Graphic file (type bmp)
+<pics/wireshark1.png>
+
+Overfull \hbox (102.87627pt too wide) in paragraph at lines 5--6
+ [][][][][] 
+ []
+
+File: pics/client.png Graphic file (type bmp)
+<pics/client.png>
+File: pics/w1.png Graphic file (type bmp)
+<pics/w1.png>
+File: pics/w2.png Graphic file (type bmp)
+<pics/w2.png>
+File: pics/w3.png Graphic file (type bmp)
+<pics/w3.png>
+File: pics/w4.png Graphic file (type bmp)
+<pics/w4.png>
+File: pics/w5.png Graphic file (type bmp)
+<pics/w5.png>
+[8] [9]
+File: pics/client_hello.png Graphic file (type bmp)
+<pics/client_hello.png>
+
+Overfull \hbox (8.35461pt too wide) in paragraph at lines 53--54
+ [][][][][] 
+ []
+
+File: pics/server_hello.png Graphic file (type bmp)
+<pics/server_hello.png>
+
+Overfull \hbox (2.83401pt too wide) in paragraph at lines 65--66
+ [][][][][] 
+ []
+
+[10]
+File: pics/signiture.png Graphic file (type bmp)
+<pics/signiture.png>
+File: pics/issuer.png Graphic file (type bmp)
+<pics/issuer.png>
+
+Overfull \hbox (91.66566pt too wide) in paragraph at lines 82--83
+ [][][][][] 
+ []
+
+[11]
+File: pics/dh_key.png Graphic file (type bmp)
+<pics/dh_key.png>
+
+Overfull \hbox (46.49706pt too wide) in paragraph at lines 91--92
+ [][][][][] 
+ []
+
+)) [12] (./questions/5.tex
+Underfull \hbox (badness 10000) in paragraph at lines 1--3
+[][]
+ []
+
+File: pics/iptables1.png Graphic file (type bmp)
+<pics/iptables1.png>
+File: pics/iptables2.png Graphic file (type bmp)
+<pics/iptables2.png>
+File: pics/iptables3.png Graphic file (type bmp)
+<pics/iptables3.png>
+[13]
+File: pics/iptables4.png Graphic file (type bmp)
+<pics/iptables4.png>
+File: pics/iptables5.png Graphic file (type bmp)
+<pics/iptables5.png>
+) [14] (./HW.aux)
 Package rerunfilecheck Info: File `HW.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 42740 strings out of 476683
- 993586 string characters out of 5804047
- 1949018 words of memory out of 5000000
- 62214 multiletter control sequences out of 15000+600000
+ 42970 strings out of 476683
+ 997343 string characters out of 5804047
+ 1952018 words of memory out of 5000000
+ 62418 multiletter control sequences out of 15000+600000
  521456 words of font info for 85 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  102i,11n,108p,1688b,1940s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.pdf (7 pages).
+Output written on HW.pdf (14 pages).
